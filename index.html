@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Custom Car Design</title>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="base.js"></script>
+        <script src="car.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-asset-item id="car1" src="./Assets/Car1/scene.gltf"></a-asset-item>
+                <a-asset-item id="car2" src="./Assets/Car2/scene.gltf"></a-asset-item>
+                <a-asset-item id="car3" src="./Assets/Car3/scene.gltf"></a-asset-item>
+            </a-assets>
+            <a-camera position="25 10 25"  camera look-controls wasd-controls="acceleration:250; fly:true"></a-camera>
+            <a-entity base="radius:10;height:1" position="0 0 0"></a-entity>
+            <a-entity car-model="modelRef:./Assets/Car1/scene.gltf" scale="400 400 400"  position="0 0.45 -1" rotate-on-click></a-entity>
+            <a-entity base="radius:10;height:1" position="25 -0.45 -1"></a-entity>
+            <a-entity car-model="modelRef:./Assets/Car2/scene.gltf" position="25 0 -1" rotate-on-click></a-entity>
+            <a-entity base="radius:10;height:1" position="50 -0.45 -1"></a-entity>
+            <a-entity car-model="modelRef:./Assets/Car3/scene.gltf" position="50 0 -1" scale="0.04 0.04 0.04" rotate-on-click></a-entity>
+        </a-scene>
+    </body>
+</html>
